@@ -60,6 +60,12 @@
           </header>
         </div>
 
+        <div class="modal is-hiden" data-modal>
+          <div class="modal-content">
+            <button class="close-btn" data-modal-close>&times;</button>
+          </div>
+        </div>
+
         <main>
           <!-- 'Hero' Sectione  -->
 
@@ -70,7 +76,7 @@
                 <h1 class="hero-title">for Your Business</h1>
               </div>
               <div class="container-button">
-                <button type="button" class="button">Order service</button>
+                <button type="button" class="button" data-modal-open>Order service</button>
               </div>
             </div>
           </section>
@@ -400,6 +406,7 @@
             </ul>
           </footer>
         </div>
+        <script src="./js/modal.js"></script>
       </body>
     </div>
   </div>

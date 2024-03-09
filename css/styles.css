@@ -15,6 +15,7 @@
   --second-family: "Raleway", sans-serif;
   --social-background: #4d5ae5;
   --icons-color: rgb(207, 118, 17);
+  --overlay-color: blue;
 }
 h1,
 h2,
@@ -36,9 +37,7 @@ a:active {
 a:hover {
   color: var(--iris);
 }
-.button:hover {
-  background-color: var(--light-slate);
-}
+
 .section-main-page {
   width: 1440px;
   height: 2592px;
@@ -153,17 +152,18 @@ a:hover {
   font-size: 2em;
   margin-bottom: 1em;
 }
-
-.button {
-  background-color: var(--iris);
-  color: var(--white);
-  padding: var(--iris) 16px 32px;
-  border-radius: 4px;
+.button:hover,
+.button:active {
+  background-color: var(--light-slate);
   cursor: pointer;
+}
+.button {
   border-radius: 4px;
   padding: 16px 32px;
   width: 169px;
   height: 56px;
+  background-color: var(--iris);
+  color: var(--white);
 }
 /* Strategy Section */
 .box-strategy {
@@ -339,4 +339,54 @@ a:hover {
   font-size: 16px;
   letter-spacing: 0.02em;
   color: var(--white);
+}
+.is-hidden {
+  visibility: hidden;
+}
+.modal {
+  position: fixed;
+  top: 80px;
+  left: 516px;
+  width: 50vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: #fff;
+  position: relative;
+  border-radius: 4px;
+  width: 408px;
+  height: 584px;
+}
+.close-btn {
+  background-color: red;
+  border-radius: 50%;
+  color: #fff;
+  outline: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  background-color: var(--overlay-color);
+  opacity: 0.5;
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-overlay:hover .overlay {
+  transform: translateY(0px);
 }
